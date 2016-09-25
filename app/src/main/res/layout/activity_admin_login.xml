@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="15dp"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:id="@+id/linear_admin"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    tools:context="com.samhith.attendance.AdminLogin">
+
+    <ImageView android:src="@drawable/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="72dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText android:id="@+id/admin_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:inputType="text"
+        android:hint="@string/admin_id" />
+
+
+    <EditText android:id="@+id/admin_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:inputType="textPassword"
+        android:hint="@string/password" />
+
+    <com.dd.processbutton.iml.ActionProcessButton
+        android:id="@+id/btnLogIn_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        custom:pb_colorComplete="@color/green_complete"
+        custom:pb_colorNormal="@color/colorPrimaryDark"
+        custom:pb_colorPressed="@color/blue_pressed"
+        custom:pb_colorProgress="@color/purple_progress"
+        custom:pb_textComplete="Success"
+        custom:pb_textProgress="Loading"
+        custom:pb_textError="Error"
+
+        custom:pb_colorError="@color/red_error"
+        android:layout_marginTop="25dp" />
+
+
+</LinearLayout>
+</ScrollView>

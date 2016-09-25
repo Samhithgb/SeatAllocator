@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="15dp"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlayout_login"
+        android:padding="10dp">
+
+        <ImageView android:src="@drawable/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:id="@+id/image"
+            android:layout_margin="50dp"
+            android:layout_centerHorizontal="true"
+
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/app_logo" />
+
+
+        <EditText android:id="@+id/usn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@+id/image"
+            android:inputType="text"
+            android:hint="@string/usn" />
+
+
+        <com.dd.processbutton.iml.ActionProcessButton
+            android:id="@+id/btnLogIn"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:text="@string/login_admin"
+            android:layout_below="@+id/usn"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            custom:pb_colorComplete="@color/green_complete"
+            custom:pb_colorNormal="@color/colorPrimary"
+            custom:pb_colorPressed="@color/blue_pressed"
+            custom:pb_colorProgress="@color/purple_progress"
+            custom:pb_textComplete="Success"
+            custom:pb_textProgress="Loading"
+            custom:pb_textError="Error"
+
+            custom:pb_colorError="@color/red_error"
+            android:layout_marginTop="25dp" />
+        <com.dd.processbutton.iml.ActionProcessButton
+            android:id="@+id/btnLogInAdmin"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/btnLogIn"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:text="@string/administrator_login"
+
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            custom:pb_colorComplete="@color/green_complete"
+            custom:pb_colorNormal="@color/colorPrimary"
+            custom:pb_colorPressed="@color/blue_pressed"
+            custom:pb_colorProgress="@color/purple_progress"
+            custom:pb_textComplete="Success"
+            custom:pb_textProgress="Loading"
+            custom:pb_textError="Error"
+            android:layout_marginBottom="25dp"
+            custom:pb_colorError="@color/red_error"
+            android:layout_marginTop="25dp" />
+
+
+
+    </RelativeLayout>
+</ScrollView>

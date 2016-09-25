@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Attendance</string>
+    <string name="attendance_app_for_rvce_placements">Attendance App for RVCE Placements</string>
+    <string name="usn">Enter Your USN</string>
+    <string name="administrator_login">Administrator Login</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="admin_id">Admin ID</string>
+    <string name="app_logo">App Logo</string>
+    <string name="login_admin">Login</string>
+</resources>
