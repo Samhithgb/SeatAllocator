@@ -3,6 +3,7 @@ package com.samhith.attendance;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -36,6 +37,7 @@ public class Login extends Activity {
 
     EditText usn;
     RelativeLayout login_relative;
+    String usn_string;
     ActionProcessButton login,admin_login;
     public static final int CONNECTION_TIMEOUT=10000;
     public static final int READ_TIMEOUT=15000;
@@ -52,7 +54,9 @@ public class Login extends Activity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                        final String usn_string =usn.getText().toString();
+                usn_string =usn.getText().toString();
+
+
                 new AsyncLogin().execute(usn_string);
 
 
@@ -83,7 +87,7 @@ public class Login extends Activity {
                     try {
 
                         // Enter URL address where your php file resides
-                        url = new URL("http://172.17.2.241/test/login.php");
+                        url = new URL("http://careerportal.heliohost.org/login.php");
 
                     } catch (MalformedURLException e) {
                         // TODO Auto-generated catch block
@@ -171,8 +175,14 @@ public class Login extends Activity {
                 /* Here launching another activity when login successful. If you persist login state
                 use sharedPreferences of Android. and logout button to clear sharedPreferences.
                  */
-                        Toast.makeText(Login.this, "Success", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(Login.this,LandingScreenStudent.class);
+                        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
+                        SharedPreferences.Editor editor = pref.edit();
+                        editor.putBoolean("login", true); // Storing boolean - true/false
+                        editor.putString("usn", usn_string); // Storing string
+                        editor.apply();
+                        Toast.makeText(Login.this, "Welcome!", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(Login.this,LandingScreen.class);
+                        intent.putExtra("usn",usn_string);
                         startActivity(intent);
                         Login.this.finish();
 

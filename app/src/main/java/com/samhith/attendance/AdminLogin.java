@@ -79,7 +79,7 @@ public class AdminLogin extends AppCompatActivity {
                     try {
 
                         // Enter URL address where your php file resides
-                        url = new URL("http://172.17.2.241/test/login_admin.php");
+                        url = new URL("http://192.168.43.195/test/login_admin.php");
 
                     } catch (MalformedURLException e) {
                         // TODO Auto-generated catch block

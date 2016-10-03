@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/book"
+        android:title="@string/refresh"
+        app:showAsAction="withText|always"
+        android:icon="@drawable/ic_refresh_white_24dp"/>
+
+</menu>
